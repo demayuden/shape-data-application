@@ -49,13 +49,16 @@ alphv/
    myenv\Scripts\activate # On Windows
    source myenv/bin/activate # On macOS/Linux
 
-2. Install dependencies:
+2. Navigate to backend directory:
+
+   ````bash
+   cd backend```
+
+   ````
+
+3. Install dependencies:
    pip install -r requirements.txt
 
-3. Navigate to backend directory:
-   ```bash
-   cd backend
-   ```
 4. Run migrations:
    python manage.py makemigrations
    python manage.py migrate
