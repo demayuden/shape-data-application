@@ -1,0 +1,96 @@
+/* Full-page wrapper */
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fbeaff, #e0f7fa);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Login box styling */
+.login-box {
+  background: #fff;
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(173, 128, 255, 0.25);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Title */
+.login-box h2 {
+  color: #7e57c2;
+  margin-bottom: 1.8rem;
+  font-size: 1.8rem;
+}
+
+/* Input fields */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cba5f7;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  background-color: #faf5ff;
+}
+
+.login-box input:focus {
+  border-color: #9575cd;
+  outline: none;
+}
+
+/* Login button */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8368c8;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background-color 0.1s ease;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #7541b9;
+}
+
+/* Checkbox row */
+.checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.checkbox-row label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Back to homepage link */
+.back-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  text-decoration: none;
+  color: #7e57c2;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #4a148c;
+  text-decoration: underline;
+}

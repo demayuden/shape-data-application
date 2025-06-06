@@ -1,0 +1,77 @@
+.admin-form-container {
+  background: #f9f6fd;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 15px rgba(126, 87, 194, 0.2);
+}
+
+.admin-form-container h2 {
+  text-align: center;
+  color: #5e35b1;
+  margin-bottom: 1.5rem;
+}
+
+.admin-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.admin-form-container label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  color: #5e35b1;
+}
+
+.admin-form-container input[type="text"],
+.admin-form-container select,
+.admin-form-container input[type="color"] {
+  padding: 10px;
+  border: 1px solid #c7b8e0;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline-color: #7e57c2;
+  margin-top: 5px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.admin-form-container button {
+  padding: 10px 16px;
+  background-color: #7e57c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.admin-form-container button:hover {
+  background-color: #5e35b1;
+}
+
+.admin-form-container .cancel-btn {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.admin-form-container .cancel-btn:hover {
+  background-color: #c6c6c6;
+}
+
+.live-preview {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px dashed #c7b8e0;
+  border-radius: 10px;
+  background: #faf7ff;
+}

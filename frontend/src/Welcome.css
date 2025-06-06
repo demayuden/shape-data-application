@@ -1,0 +1,98 @@
+/* Full-page wrapper */
+.welcome-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to bottom, rgb(215, 208, 252), lch(82.57% 18.28 280.14));
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Floating background shapes container */
+.shape-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;       /* ✅ Ensure full screen height */
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Individual shapes */
+.shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.4;
+  animation: float 2s linear infinite;
+}
+
+.shape.circle {
+  border-radius: 50%;
+  background-color: #b286f1b9;
+}
+
+.shape.square {
+  background-color: #9cd8f7;
+}
+
+.shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid #aed9ae96;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg); /* goes off screen upward */
+  }
+}
+
+/* Foreground content */
+.welcome-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Buttons styling */
+.welcome-buttons {
+  margin-top: 20px;
+}
+
+/* Purple-styled buttons */
+.btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #7e57c2; /* deep purple */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #5e35b1; /* darker on hover */
+}
+
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #7e57c2;
+  color: #7e57c2;
+}
+
+.btn.outline:hover {
+  background-color: #7e57c2;
+  color: white;
+}
+
