@@ -15,10 +15,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include  # ⬅️ Add 'include'
+from django.urls import path, include
+from api import consumers
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('api.urls')),  # ⬅️ This line connects your app's URLs
+    path('', home),  # 👈 Root path
+    path("admin/", admin.site.urls),
+    path('api/', include('api.urls')),
 ]
 
+websocket_urlpatterns = [
+    path('ws/shape_data/', consumers.ShapeDataConsumer.as_asgi()),
+]

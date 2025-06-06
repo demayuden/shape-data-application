@@ -19,6 +19,7 @@ from django.urls import path, include
 from api import consumers
 
 urlpatterns = [
+    path('', home),  # 👈 Root path
     path("admin/", admin.site.urls),
     path('api/', include('api.urls')),
 ]
