@@ -9,11 +9,11 @@ This document outlines unit, integration, and end-to-end testing for the Shape D
 - **Jest** & **React Testing Library** – Unit & integration tests
 - **Cypress** – End-to-end testing (admin flow)
 
-### 🔹 Run Tests
+### Run Tests
 
 ## 📦 Unit & Integration Tests
 
-### 🔹 Location
+### Location
 
 /frontend/src/tests/
 
