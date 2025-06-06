@@ -29,6 +29,7 @@ alphv/
 │ ├── backend/ # Django project config
 │ ├── api/ # Django app
 │ └── db.sqlite3
+│ └──requirements.txt
 ├── frontend/ # React frontend (Create React App)
 │ ├── src/
 │ ├── cypress
@@ -36,7 +37,6 @@ alphv/
 ├──images
 ├──manage.py
 ├──README.md
-├──requirements.txt
 ├──TESTING.md
 |
 
