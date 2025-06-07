@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
 import ShapeIcon from './ShapeIcon';
-import './DataGrid.css'; // Make sure this exists
+import API_BASE_URL from './config';
+import './DataGrid.css';
 
 const DataGrid = ({ onEdit, authToken }) => {
   const [data, setData] = useState([]);
@@ -13,7 +14,7 @@ const DataGrid = ({ onEdit, authToken }) => {
     const fetchData = async () => {
       try {
         const token = authToken || localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
-        const result = await axios.get('http://127.0.0.1:8000/api/data/', {
+        const result = await axios.get(`${API_BASE_URL}/api/data/`, {
           headers: token ? { Authorization: `Token ${token}` } : {},
         });
         setData(result.data);
@@ -30,10 +31,9 @@ const DataGrid = ({ onEdit, authToken }) => {
   const handleDelete = async (id) => {
     try {
       const token = authToken || localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
-      await axios.delete(`http://127.0.0.1:8000/api/data/${id}/`, {
+      await axios.delete(`${API_BASE_URL}/api/data/${id}/`, {
         headers: token ? { Authorization: `Token ${token}` } : {},
       });
-      // Refresh after delete
       setData(prev => prev.filter(item => item.id !== id));
     } catch (error) {
       console.error('Delete failed:', error);
