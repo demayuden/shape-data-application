@@ -49,6 +49,8 @@ alphv/
    myenv\Scripts\activate # On Windows
    source myenv/bin/activate # On macOS/Linux
 
+   _if you encounter a permission error here, try changing the project directory to your local directory_
+
 2. Navigate to backend directory:
 
    ````bash
