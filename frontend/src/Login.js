@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import './Login.css';
+import API_BASE_URL from './config'; // import at the top
+
 
 const Login = ({ setAuthToken }) => {
   const [username, setUsername] = useState('');
@@ -13,7 +15,8 @@ const Login = ({ setAuthToken }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/login/', { username, password });
+    //const res = await axios.post('http://127.0.0.1:8000/api/login/', { username, password });  
+      const res = await axios.post(`${API_BASE_URL}/api/login/`, { username, password });
 
       if (rememberMe) {
         localStorage.setItem('authToken', res.data.token);
