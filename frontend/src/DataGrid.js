@@ -13,7 +13,7 @@ const DataGrid = ({ onEdit, authToken }) => {
     const fetchData = async () => {
       try {
         const token = authToken || localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
-        const result = await axios.get('http://127.0.0.1:8000/api/data/', {
+        const result = await axios.get(`${process.env.REACT_APP_API_URL}/data/`, {
           headers: token ? { Authorization: `Token ${token}` } : {},
         });
         setData(result.data);
@@ -30,7 +30,7 @@ const DataGrid = ({ onEdit, authToken }) => {
   const handleDelete = async (id) => {
     try {
       const token = authToken || localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
-      await axios.delete(`http://127.0.0.1:8000/api/data/${id}/`, {
+      await axios.delete(`${process.env.REACT_APP_API_URL}/data/${id}/`, {
         headers: token ? { Authorization: `Token ${token}` } : {},
       });
       // Refresh after delete
