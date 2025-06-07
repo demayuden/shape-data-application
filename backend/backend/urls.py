@@ -17,6 +17,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from api import consumers
+from django.http import HttpResponse
+
+# ✅ Define the home view function
+def home(request):
+    return HttpResponse("✅ Welcome to the Shape Data Application Backend!")
+
 
 urlpatterns = [
     path('', home),  # 👈 Root path
