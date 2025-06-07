@@ -23,9 +23,13 @@ class CustomLoginView(ObtainAuthToken):
 class ShapeDataListCreate(generics.ListCreateAPIView):
     queryset = ShapeData.objects.all()
     serializer_class = ShapeDataSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    # Allow anyone to GET (read), but only logged-in users can POST (create)
+    permission_classes = [AllowAny]
 
 class ShapeDataRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = ShapeData.objects.all()
     serializer_class = ShapeDataSerializer
-    permission_classes = [IsAuthenticatedOrReadOnly]
+
+    # Same logic: GET for anyone, updates/deletes need auth
+    permission_classes = [AllowAny]
