@@ -5,9 +5,9 @@ class Command(BaseCommand):
     help = 'Create superuser on Render if it does not exist'
 
     def handle(self, *args, **kwargs):
-        username = 'admin'
-        email = 'admin@example.com'
-        password = 'your_secure_password'  # ✅ CHANGE THIS
+        username = 'dema'
+        email = 'dema.yuden@student.aiu.edu.my'
+        password = 'demayuden146'  # ✅ CHANGE THIS
 
         if not User.objects.filter(username=username).exists():
             User.objects.create_superuser(username, email, password)
