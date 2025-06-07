@@ -107,4 +107,19 @@ alphv/
 - Username: 'the superuser you created earlier'
 - Password: 'the password you created for your superuser earlier'
 
-Enjoy navigating!
+### Live Deployment
+
+This project is also deployed and accessible online:
+
+Frontend: https://shape-data-application-frontend.onrender.com
+
+Backend (Django Admin/API): https://shape-data-application.onrender.com
+
+# Admin Login
+
+To access the admin dashboard online:
+
+Go to Backend Admin Panel: https://shape-data-application.onrender.com/admin/login/?next=/admin/
+Use your Django superuser credentials to log in
+
+# Enjoy navigating!
