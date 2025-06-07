@@ -42,6 +42,19 @@ alphv/
 
 ## 🚀 Getting Started
 
+### 🌐 Environment Setup (.env)
+
+For Local Development:
+If you're running both frontend and backend locally:
+
+- Create a .env file inside the frontend/ folder.
+- Add the following line:
+  REACT_APP_API_URL=http://127.0.0.1:8000
+
+For Deployment on Render
+When deploying the frontend to Render, update the .env as:
+REACT_APP_API_URL=https://shape-data-application.onrender.com
+
 ### 🔧 Backend Setup (Django)
 
 1. Create and activate a virtual environment:
